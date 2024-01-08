@@ -8,13 +8,13 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            margin-top: 50px;
+            margin-top: 20px;
         }
 
         #clock {
             font-size: 3em;
             color: #00FF00; /* #fff text color */
-            background-color: #fff; /* #333 background color */
+            background-color: #000; /* #333 background color */
             padding: 5px;
             border-radius: 10px;
             display: inline-block;
@@ -23,7 +23,7 @@
         #date {
             font-size: 1.5em;
             color: #00FF00; /* #fff text color */
-            background-color: #fff; /* #333 background color */
+            background-color: #000; /* #333 background color */
             /* color: #555; */
         }
     </style>
@@ -55,7 +55,7 @@
             seconds = (seconds < 10) ? '0' + seconds : seconds;
 
             var timeString = hours + ':' + minutes + ':' + seconds;
-            var dateString = weekdayName + ', ' + day + ' ' + monthName + ' ' + year;
+            var dateString = weekdayName + ', ' + day + ' - ' + month + monthName + ' - ' + year;
 
             document.getElementById('clock').innerHTML = timeString;
             document.getElementById('date').innerHTML = dateString;
