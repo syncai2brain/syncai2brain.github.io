@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yearly Calendar with Navigation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        table {
+            width: 60%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        td {
+            cursor: pointer;
+        }
+
+        .highlight {
+            background-color: #4CAF50; /* Green */
+            color: white;
+        }
+
+        #month-year {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        #navigation {
+            margin-bottom: 20px;
+        }
+
+        #prev, #next {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="navigation">
+        <span id="prev" onclick="navigate(-1)"><<</span>
+        <div id="month-year"></div>
+        <span id="next" onclick="navigate(1)">>></span>
+    </div>
+    <table id="calendar">
+        <thead>
+            <tr>
+                <th>Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        var currentYear = new Date().getFullYear();
+        var currentMonth = new Date().getMonth();
+
+        function createCalendar(year, month) {
+            var firstDay = new Date(year, month, 1);
+            var lastDay = new Date(year, month + 1, 0);
+            var tableBody = document.querySelector('#calendar tbody');
+            var monthYear = document.getElementById('month-year');
+            tableBody.innerHTML = '';
+
+            var currentDate = 1;
+
+            monthYear.textContent = new Intl.DateTimeFormat('en-US', { month: 'long', year: 'numeric' }).format(firstDay);
+
+            for (var i = 0; i < 6; i++) {
+                var row = document.createElement('tr');
+
+                for (var j = 0; j < 7; j++) {
+                    var cell = document.createElement('td');
+                    
+                    if (i === 0 && j < firstDay.getDay()) {
+                        // Empty cells before the first day of the month
+                        cell.textContent = '';
+                    } else if (currentDate > lastDay.getDate()) {
+                        // Empty cells after the last day of the month
+                        cell.textContent = '';
+                    } else {
+                        cell.textContent = currentDate;
+
+                        // Highlight the current day
+                        if (currentDate === new Date().getDate() && month === new Date().getMonth() && year === new Date().getFullYear()) {
+                            cell.classList.add('highlight');
+                        }
+
+                        currentDate++;
+                    }
+
+                    row.appendChild(cell);
+                }
+
+                tableBody.appendChild(row);
+            }
+        }
+
+        function navigate(direction) {
+            currentMonth += direction;
+
+            if (currentMonth < 0) {
+                currentMonth = 11;
+                currentYear--;
+            } else if (currentMonth > 11) {
+                currentMonth = 0;
+                currentYear++;
+            }
+
+            createCalendar(currentYear, currentMonth);
+        }
+
+        // Initialize with the current month and year
+        createCalendar(currentYear, currentMonth);
+    </script>
+</body>
+</html>
