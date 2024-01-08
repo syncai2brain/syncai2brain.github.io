@@ -11,9 +11,14 @@
             margin-top: 50px;
         }
 
-        table {
+        #calendar-container {
             width: 60%;
             margin: 20px auto;
+            overflow: hidden; /* Ensure that content doesn't overflow */
+        }
+
+        table {
+            width: 100%;
             border-collapse: collapse;
         }
 
@@ -35,9 +40,15 @@
             color: white;
         }
 
+        #month-year-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
         #month-year {
             font-size: 1.5em;
-            margin-bottom: 10px;
         }
 
         #navigation {
@@ -49,29 +60,34 @@
             background-color: #4CAF50;
             color: white;
             cursor: pointer;
+            margin: 0 10px;
         }
     </style>
 </head>
 <body>
     <div id="navigation">
         <span id="prev" onclick="navigate(-1)"><<</span>
-        <div id="month-year"></div>
+        <div id="month-year-container">
+            <span id="month-year"></span>
+        </div>
         <span id="next" onclick="navigate(1)">>></span>
     </div>
-    <table id="calendar">
-        <thead>
-            <tr>
-                <th>Sun</th>
-                <th>Mon</th>
-                <th>Tue</th>
-                <th>Wed</th>
-                <th>Thu</th>
-                <th>Fri</th>
-                <th>Sat</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
+    <div id="calendar-container">
+        <table id="calendar">
+            <thead>
+                <tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
 
     <script>
         var currentYear = new Date().getFullYear();
