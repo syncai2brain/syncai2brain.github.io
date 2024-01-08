@@ -40,6 +40,7 @@
             var seconds = now.getSeconds();
             var day = now.getDate();
             var month = now.getMonth();
+            var m = now.getMonth() + 1;
             var year = now.getFullYear();
 
             // Get weekday and month names
@@ -55,7 +56,7 @@
             seconds = (seconds < 10) ? '0' + seconds : seconds;
 
             var timeString = hours + ':' + minutes + ':' + seconds;
-            var dateString = weekdayName + ', ' + day + ' - ' + month + monthName + ' - ' + year;
+            var dateString = weekdayName + ', ' + day + ' - ' + m + '(' + monthName + ')' + ' - ' + year;
 
             document.getElementById('clock').innerHTML = timeString;
             document.getElementById('date').innerHTML = dateString;
