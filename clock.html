@@ -8,7 +8,7 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            margin-top: 50px;
+            margin-top: 30px;
         }
 
         #clock {
@@ -36,6 +36,13 @@
             var month = now.getMonth() + 1; // Months are zero-based
             var year = now.getFullYear();
 
+            // Get weekday and month names
+            var weekdayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            var monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+            var weekdayName = weekdayNames[now.getDay()];
+            var monthName = monthNames[month];
+
             // Add leading zero if needed
             hours = (hours < 10) ? '0' + hours : hours;
             minutes = (minutes < 10) ? '0' + minutes : minutes;
@@ -43,7 +50,8 @@
             month = (month < 10) ? '0' + month : month;
 
             var timeString = hours + ':' + minutes + ':' + seconds;
-            var dateString = day + '/' + month + '/' + year;
+            var dateString = weekdayName + ', ' + day + ' - ' + month + (monthName) + ' - ' + year;
+
 
             document.getElementById('clock').innerHTML = timeString;
             document.getElementById('date').innerHTML = dateString;
