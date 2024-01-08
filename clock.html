@@ -43,6 +43,7 @@
             var month = now.getMonth();
             var m = now.getMonth() + 1;
             var year = now.getFullYear();
+            var ampm = hours >= 12 ? 'pm' : 'am';
 
             // Get weekday and month names
             var weekdayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -52,6 +53,8 @@
             var monthName = monthNames[month];
 
             // Add leading zero if needed
+            hours = hours % 12;
+            hours = hours ? hours : 12;
             hours = (hours < 10) ? '0' + hours : hours;
             minutes = (minutes < 10) ? '0' + minutes : minutes;
             seconds = (seconds < 10) ? '0' + seconds : seconds;
