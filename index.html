@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html>
+  <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .iframe-container {
+            width: 100%;
+            height: 50vh; /* Adjust the height as needed */
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+  </style>
+  
   <body>
     <h1>Welcome to Learning with Sync2Brain</h1>
     
     <div id="frame1">
-      <iframe align ="right" src="clock.html"></iframe>
+      <iframe align ="right" src="clock.html" frameborder="0"></iframe>
     </div>
 
     <div id="frame1">
-      <iframe align ="right" src="calendar.html"></iframe>
+      <iframe align ="right" src="calendar.html" frameborder="0"></iframe>
     </div>
     
   </body>
