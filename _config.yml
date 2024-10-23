@@ -6,7 +6,7 @@ gem "github-pages", group: :jekyll_plugins
 
 title: SyncAi2Brain
 description: Learn Ai
-markdown: GFM
+markdown: kramdown
 mathjax:
   enable: true
   combo: "tex-svg"
