@@ -1,10 +1,64 @@
 remote_theme: daviddarnes/alembic@main
+
+# 2. Installed Gems
 plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
 - jekyll-paginate
 - jekyll-seo-tag
 - jekyll-feed
+- jekyll-sitemap
+- jekyll-mentions
+- jekyll-redirect-from
+- jekyll-commonmark
+- jekyll-include-cache
+- jemoji
 
+# 3. Gem settings
+paginate: 2 # jekyll-paginate > items per page
+paginate_path: blog/page:num # jekyll-paginate > blog page
+
+# 4. Jekyll settings
+sass:
+  style: compressed # Style compression
+permalink: pretty  # Permalink style (/YYYY/MM/DD/page-name/)
+excerpt_separator: <!-- more --> # Marks end of excerpt in posts
+timezone: Asia/Kolkata # Timezone for blog posts and alike
+
+# 6. Jekyll collections settings
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      image: "/assets/default-social-image.png" # Default image for sharing
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post # Set the default layout for posts
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: page # Set the default layout for pages
+
+      # 9. Site navigation
+navigation_header:
+- title: Home
+  url: /
+- title: Elements
+  url: /elements/
+- title: Blog
+  url: /blog/
+- title: Categories
+  url: /categories/
+- title: Search
+  url: /search/
+- title: Fork Alembic
+  url: https://github.com/daviddarnes/alembic
+  
 katex: true                                             # Enable if using math markup
 mermaid: default                                        # Enable mermaid-js for diagrams, use theme: base, forest, dark, default, neutral
 color_theme: auto                                       # auto, dark or light
@@ -14,19 +68,4 @@ url: "https://syncai2brain.github.io"
 title: SyncAi2Brain
 description: Learn Ai
 
-sidebars:
-- home_sidebar
-- mydoc_sidebar
-- product1_sidebar
-- product2_sidebar
-- other
 
-highlighter: rouge
-# library used for syntax highlighting
-
-markdown: kramdown
-kramdown:
- input: GFM
- auto_ids: true
- hard_wrap: false
- syntax_highlighter: rouge
