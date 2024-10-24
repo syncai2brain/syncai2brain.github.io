@@ -1,4 +1,4 @@
-remote_theme: sylhare/Type-on-Strap
+remote_theme: daviddarnes/alembic@main
 plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
 - jekyll-paginate
@@ -14,4 +14,19 @@ url: "https://syncai2brain.github.io"
 title: SyncAi2Brain
 description: Learn Ai
 
+sidebars:
+- home_sidebar
+- mydoc_sidebar
+- product1_sidebar
+- product2_sidebar
+- other
 
+highlighter: rouge
+# library used for syntax highlighting
+
+markdown: kramdown
+kramdown:
+ input: GFM
+ auto_ids: true
+ hard_wrap: false
+ syntax_highlighter: rouge
