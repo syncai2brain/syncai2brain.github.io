@@ -16,6 +16,11 @@ plugins:
 # 3. Gem settings
 paginate: 2 # jekyll-paginate > items per page
 paginate_path: blog/page:num # jekyll-paginate > blog page
+author: Hrushikesha # jekyll-seo-tag > default author
+social: # jekyll-seo-tag > social overrides
+  name: Hrushikesha Shastry B S # jekyll-seo-tag > real name
+  links:  # jekyll-seo-tag > social aliases (sameAs)
+    - https://www.linkedin.com/in/hrushikeshabs
 
 # 4. Jekyll settings
 sass:
@@ -23,6 +28,16 @@ sass:
 permalink: pretty  # Permalink style (/YYYY/MM/DD/page-name/)
 excerpt_separator: <!-- more --> # Marks end of excerpt in posts
 timezone: Asia/Kolkata # Timezone for blog posts and alike
+
+# 5. Collections
+collections:
+  posts:
+    title: Posts # Needed for Siteleaf
+    output: true
+    description: "My thoughts and ideas" # The post list page content
+    feature_text: |
+      Welcome to the blog
+    feature_image: "https://picsum.photos/2560/600?image=866"
 
 # 6. Jekyll collections settings
 defaults:
@@ -44,7 +59,31 @@ defaults:
     values:
       layout: page # Set the default layout for pages
 
-      # 9. Site navigation
+# 7. Site settings
+encoding: utf-8 # Make sure the encoding is right
+lang: en-IN # Set the site language
+title: "SyncAi2Brain" # Site name or title, also used in jekyll-seo-tag
+logo: "/assets/logos/logo.svg" # Site logo, also used in jekyll-seo-tag
+description: "Easy AI Learning" # Site description and default description, also used in jekyll-seo-tag
+url: "https://syncai2brain.github.io" # Site url, also used in jekyll-seo-tag
+baseurl: ""
+repo: "https://github.com/syncai2brain"
+email: "hru8181@gmail.com"
+# short_name: "Al" # The web application short name, defaults to the site title
+css_inline: true # Will insert all styles into a single <style> block in the <head> element and remove the style <link> reference
+
+# 8. Site favicons & manifest icons
+favicons: # Favicons are also used in the manifest file. Syntax is 'size: path'
+  16: '/assets/logos/logo@16px.png'
+  32: '/assets/logos/logo@32px.png'
+  96: '/assets/logos/logo@96px.png'
+  120: '/assets/logos/logo@120px.png'
+  144: '/assets/logos/logo@144px.png'
+  180: '/assets/logos/logo@180px.png'
+  512: '/assets/logos/logo@512px.png'
+  1024: '/assets/logos/logo@1024px.png'
+
+# 9. Site navigation
 navigation_header:
 - title: Home
   url: /
@@ -56,16 +95,21 @@ navigation_header:
   url: /categories/
 - title: Search
   url: /search/
-- title: Fork Alembic
-  url: https://github.com/daviddarnes/alembic
-  
-katex: true                                             # Enable if using math markup
-mermaid: default                                        # Enable mermaid-js for diagrams, use theme: base, forest, dark, default, neutral
-color_theme: auto                                       # auto, dark or light
-baseurl: ""
-url: "https://syncai2brain.github.io"
 
-title: SyncAi2Brain
-description: Learn Ai
+navigation_footer:
+- title: Created by Hrushikesha
+  url: https://syncai2brain.github.io
 
+social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
+  LinkedIn: https://www.linkedin.com/in/hrushikeshabs
+  GitHub: https://github.com/syncai2brain
+  RSS: /feed.xml
 
+sharing_links: # Appear at the bottom of single blog posts, add as desired. The value can be 'true' or the desired button colour
+  Email: true
+
+fonts:
+  preconnect_urls:
+    - https://fonts.gstatic.com
+  font_urls:
+    - https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap
