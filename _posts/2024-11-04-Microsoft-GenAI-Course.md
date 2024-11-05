@@ -33,3 +33,62 @@ LLMs can have multiple categorizations based on their architecture, training dat
 - **Multi-modality.** If you're looking to handle multiple types of data in input and output, you might want to look into models like [gpt-4 turbo with vision or gpt-4o](https://learn.microsoft.com/azure/ai-services/openai/concepts/models#gpt-4-and-gpt-4-turbo-models?WT.mc_id=academic-105485-koreyst) - the latest releases of OpenAI models - which are capable to combine natural language processing to visual understanding, enabling interactions through multi-modal interfaces.
 
 ## Foundation Models versus LLMs
+- FMs are trained using unsupervised learning or self-supervised learning
+- FMs are very large models with  billions of parameters.
+- FMs are normally intended to serve as a ‘foundation’ for other models, meaning they can be used as a starting point for other models to be built on top of, which can be done by fine-tuning.
+
+![alt text](images/Microsoft-GenAI-Course/01_image.png)
+
+Example: OpenAI used some chat-specific data to create a tuned version of GPT-3.5 that was specialized in performing well in conversational scenarios, such as chatbots.
+
+![alt text](images/Microsoft-GenAI-Course/02_image-1.png)
+
+## Open Source versus Proprietary Models
+
+- Open-source models are models that are made available to the public and can be used by anyone.
+- These models are allowed to be inspected, modified, and customized for the various use cases in LLMs. 
+- Examples of popular open source models include Alpaca, Bloom and LLaMA.
+
+- Proprietary models are models that are owned by a company and are **not** made available to the public. 
+- These models are often optimized for production use. 
+- These models require a subscription or payment to use. 
+- Users do not have control over the data that is used to train the model.
+- Examples of popular proprietary models include OpenAI models, Google Bard or Claude 2.
+
+## Embedding versus Image generation versus Text and Code generation
+
+![]images/Microsoft-GenAI-Course/(03_image-2.png)
+Example: OpenAI Embeddings
+
+![alt text](images/Microsoft-GenAI-Course/04_image-3.png)
+Example: DALL-E-3 and Stable Diffusion models
+
+![alt text](images/Microsoft-GenAI-Course/05_image.png)
+Example: CodeParrot
+
+## Encoder-Decoder versus Decoder-only
+
+- Examples of Decoder models are GPT family models, such as GPT-3. (Like a quiz content creator)
+- Example of Encoder only model would be BERT. (Like a Quiz Reviewer)
+- Examples of Encode-Decoder models would be BART and T5. (Someone who can create and review the quiz)
+
+## Improving LLM results
+
+- Prompt engineering with context. 
+- Retrieval Augmented Generation, RAG.
+- Fine-tuned model.
+- Trained model. 
+
+![alt text](images/Microsoft-GenAI-Course/06_image.png)
+
+### Knowledge check
+What could be a good approach to improve LLM completion results?
+
+- a. Prompt engineering with context
+- b. RAG
+- c. Fine-tuned model
+
+<details>
+  <summary>Click here to check your Answer</summary>
+  Correct Answer is Option 'a.'
+</details>
