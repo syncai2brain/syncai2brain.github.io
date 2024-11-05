@@ -11,9 +11,9 @@ The course is available for free in [GitHub](https://microsoft.github.io/generat
 
 1. What's true about large language models?
 
-- [ ] a. You get the exact same response every time.
-- [ ] b. It does things perfectly, great at adding numbers, produce working code etc.
-- [ ] c. The response may vary despite using the same prompt. It's also great at giving you a first draft of something, be it text or code. But you need to improve on the results.
+- a. You get the exact same response every time.
+- b. It does things perfectly, great at adding numbers, produce working code etc.
+- c. The response may vary despite using the same prompt. It's also great at giving you a first draft of something, be it text or code. But you need to improve on the results.
 
 <details>
   <summary>Click here to check your Answer</summary>
@@ -32,3 +32,4 @@ LLMs can have multiple categorizations based on their architecture, training dat
 
 - **Multi-modality.** If you're looking to handle multiple types of data in input and output, you might want to look into models like [gpt-4 turbo with vision or gpt-4o](https://learn.microsoft.com/azure/ai-services/openai/concepts/models#gpt-4-and-gpt-4-turbo-models?WT.mc_id=academic-105485-koreyst) - the latest releases of OpenAI models - which are capable to combine natural language processing to visual understanding, enabling interactions through multi-modal interfaces.
 
+## Foundation Models versus LLMs
