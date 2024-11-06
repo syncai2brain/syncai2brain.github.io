@@ -57,7 +57,7 @@ Example: OpenAI used some chat-specific data to create a tuned version of GPT-3.
 
 ## Embedding versus Image generation versus Text and Code generation
 
-![]images/Microsoft-GenAI-Course/(03_image-2.png)
+![alt text](images/Microsoft-GenAI-Course/03_image-2.png)
 Example: OpenAI Embeddings
 
 ![alt text](images/Microsoft-GenAI-Course/04_image-3.png)
@@ -91,4 +91,45 @@ What could be a good approach to improve LLM completion results?
 <details>
   <summary>Click here to check your Answer</summary>
   Correct Answer is Option 'a.'
+</details>
+
+## Responsible AI Principles
+- Fairness, 
+- Inclusiveness, 
+- Reliability/Safety,
+- Security & Privacy,
+- Transparency and Accountability.
+
+## Why Should You Prioritize Responsible AI
+
+### 1. Hallucinations
+Hallucinations are a term used to describe when an LLM produces content that is either completely nonsensical or something we know is factually wrong based on other sources of information.
+
+### 2. Harmful Content
+- Providing instructions or encouraging self-harm or harm to certain groups.
+- Hateful or demeaning content.
+- Guiding planning any type of attack or violent acts.
+- Providing instructions on how to find illegal content or commit illegal acts.
+- Displaying sexually explicit content.
+
+### 3. Lack of Fairness
+Ensuring that an AI system is free from bias and discrimination and that they treat everyone fairly and equally.
+
+## How to Use Generative AI Responsibly?
+```mermaid
+graph LR
+  Identify --> Measure --> Mitigate --> Operate
+```
+
+### Knowledge check
+What are some things you need to care about to ensure responsible AI usage?
+
+- a. That the answer is correct.
+- b. Harmful usage, that AI isn't used for criminal purposes.
+- c. Ensuring the AI is free from bias and discrimination.
+
+![alt text](syncai2brain/syncai2brain.github.io/_posts/images/Microsoft-GenAI-Course/07_image.png)
+<details>
+  <summary>Click here to check your Answer</summary>
+  Correct Answer is Option 'b and c.'
 </details>
