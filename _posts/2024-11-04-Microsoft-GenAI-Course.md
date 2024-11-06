@@ -116,10 +116,10 @@ Hallucinations are a term used to describe when an LLM produces content that is 
 Ensuring that an AI system is free from bias and discrimination and that they treat everyone fairly and equally.
 
 ## How to Use Generative AI Responsibly?
-```mermaid
+<pre class="mermaid">
 graph LR
   Identify --> Measure --> Mitigate --> Operate
-```
+</pre>
 
 ### Knowledge check
 What are some things you need to care about to ensure responsible AI usage?
@@ -128,7 +128,7 @@ What are some things you need to care about to ensure responsible AI usage?
 - b. Harmful usage, that AI isn't used for criminal purposes.
 - c. Ensuring the AI is free from bias and discrimination.
 
-![alt text](syncai2brain/syncai2brain.github.io/_posts/images/Microsoft-GenAI-Course/07_image.png)
+![alt text]({{site.baseurl}}/_posts/images/Microsoft-GenAI-Course/07_image.png)
 <details>
   <summary>Click here to check your Answer</summary>
   Correct Answer is Option 'b and c.'
