@@ -171,6 +171,37 @@ What are some things you need to care about to ensure responsible AI usage?
 
 ## 04	Understanding Prompt Engineering Fundamentals
 
+### What is Prompt Engineering?
+Prompt Engineering as the process of designing and optimizing text inputs (prompts) to deliver consistent and quality responses (completions) for a given application objective and model.
+
+We can think of this as a 2-step process:
+
+- *designing* the initial prompt for a given model and objective.
+- *refining* the prompt iteratively to improve the quality of the response.
+
+This is necessarily a trial-and-error process that requires user intuition and effort to get optimal results. 
+
+### Tokenization
+An LLM sees prompts as a sequence of tokens where different models (or versions of a model) can tokenize the same prompt in different ways. 
+
+![alt text](images/Microsoft-GenAI-Course/08_image.png)
+
+### Foundation Models
+Once a prompt is tokenized, the primary function of the "Base LLM" (or Foundation model) is to predict the token in that sequence.
+
+### Instruction Tuned LLMs
+An Instruction Tuned LLM starts with the foundation model and fine-tunes it with examples or input/output pairs (e.g., multi-turn "messages") that can contain clear instructions - and the response from the AI attempt to follow that instruction. This uses techniques like Reinforcement Learning with Human Feedback (RLHF).
+
+### Why do we need Prompt Engineering?
+1. Model responses are stochastic.
+2. Models can fabricate responses.
+3. Models capabilities will vary.
+
+Examples:
+1. Prompt: generate a lesson plan on the Martian War of 2076.
+
+### Prompt Construction
+
 
 
 </details>
