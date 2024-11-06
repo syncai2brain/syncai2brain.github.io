@@ -7,6 +7,9 @@ categories: [Generative AI,LLM,Microsoft]
 This post provides the snippets taken from the Generative AI course designed by Microsoft.
 The course is available for free in [GitHub](https://microsoft.github.io/generative-ai-for-beginners/#/).
 
+<details>
+<summary> Part - 01 </summary>
+
 ## 01	Introduction to Generative AI and LLMs
 
 ### How did we get Generative AI?
@@ -110,6 +113,10 @@ What could be a good approach to improve LLM completion results?
   Correct Answer is Option 'a.'
 </details>
 
+---
+
+## 03	Using Generative AI Responsibly
+
 ### Responsible AI Principles
 - Fairness, 
 - Inclusiveness, 
@@ -140,6 +147,13 @@ graph LR
 
 ![alt text](images/Microsoft-GenAI-Course/07_image.png)
 
+- Choosing the right model for the right use case. 
+- A safety system is a set of tools and configurations on the platform serving the model that help mitigate harm. 
+- Metaprompts and grounding are ways we can direct or limit the model based on certain behaviors and information. 
+- The final layer is where the user interacts directly with the model through our application’s interface in some way.
+- We should always evaluate the model’s performance and outputs. It’s still important to measure the model’s accuracy, similarity, groundedness, and relevance of the output. 
+
+
 #### Knowledge check
 What are some things you need to care about to ensure responsible AI usage?
 
@@ -155,5 +169,8 @@ What are some things you need to care about to ensure responsible AI usage?
 
 ---
 
-## Prompt Engineering Fundamentals
+## 04	Understanding Prompt Engineering Fundamentals
 
+
+
+</details>
